@@ -1,0 +1,15 @@
+filename: "mock_{{.InterfaceName}}.go"
+dir: "mocks/{{.InterfaceDirRelative}}"
+mockname: "Mock{{.InterfaceName}}"
+outpkg: "{{.PackageName}}"
+with-expecter: True
+packages:
+  github.com/rosaekapratama/amartha-billing-engine-test/repositories:
+    interfaces:
+      BillingRepository:
+  github.com/rosaekapratama/amartha-billing-engine-test/services:
+    interfaces:
+      BillingService:
+  github.com/rosaekapratama/amartha-billing-engine-test/controllers/rest/v1:
+    interfaces:
+      BillingRestController:
